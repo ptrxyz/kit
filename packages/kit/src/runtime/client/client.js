@@ -1600,7 +1600,7 @@ export function create_client(app, target) {
 					blocked: () => event.preventDefault(),
 					type: 'link'
 				});
-			});
+			}, { capture: true });
 
 			container.addEventListener('submit', (event) => {
 				if (event.defaultPrevented) return;
